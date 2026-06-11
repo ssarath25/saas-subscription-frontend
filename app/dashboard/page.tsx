@@ -33,12 +33,12 @@ export default function DashboardPage() {
   const fetchSubscription = async (userId: number) => {
     try {
       const response = await axios.get(
-        `http://localhost:5000/subscription/${userId}`
+        `https://saas-platform-backend-6zku.onrender.com/subscription/${userId}`
       );
 
       setPlan(response.data);
     } catch (error) {
-      console.error(error);
+      console.error("Subscription fetch error:", error);
     }
   };
 
