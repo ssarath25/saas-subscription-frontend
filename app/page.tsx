@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-gray-100">
@@ -9,13 +11,19 @@ export default function Home() {
           </h1>
 
           <div className="space-x-4">
-            <button className="bg-white text-blue-600 px-4 py-2 rounded font-semibold">
+            <Link
+              href="/login"
+              className="bg-white text-blue-600 px-4 py-2 rounded font-semibold"
+            >
               Login
-            </button>
+            </Link>
 
-            <button className="bg-white text-blue-600 px-4 py-2 rounded font-semibold">
+            <Link
+              href="/register"
+              className="bg-white text-blue-600 px-4 py-2 rounded font-semibold"
+            >
               Register
-            </button>
+            </Link>
           </div>
         </div>
       </nav>
@@ -30,9 +38,12 @@ export default function Home() {
           Subscription Management, Billing & Analytics
         </p>
 
-        <button className="mt-8 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700">
+        <Link
+          href="/plans"
+          className="mt-8 inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700"
+        >
           Get Started
-        </button>
+        </Link>
       </section>
 
       {/* Pricing Cards */}
@@ -52,9 +63,12 @@ export default function Home() {
             Perfect for beginners and small projects.
           </p>
 
-          <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+          <Link
+            href="/plans"
+            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 inline-block"
+          >
             Subscribe
-          </button>
+          </Link>
         </div>
 
         {/* Pro */}
@@ -75,9 +89,12 @@ export default function Home() {
             Advanced features for growing businesses.
           </p>
 
-          <button className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">
+          <Link
+            href="/plans"
+            className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 inline-block"
+          >
             Subscribe
-          </button>
+          </Link>
         </div>
 
         {/* Enterprise */}
@@ -94,9 +111,12 @@ export default function Home() {
             Complete solution for large organizations.
           </p>
 
-          <button className="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700">
+          <Link
+            href="/plans"
+            className="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 inline-block"
+          >
             Subscribe
-          </button>
+          </Link>
         </div>
 
       </section>
