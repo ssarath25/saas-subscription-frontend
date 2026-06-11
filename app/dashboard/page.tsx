@@ -36,7 +36,8 @@ export default function DashboardPage() {
         `https://saas-platform-backend-6zku.onrender.com/subscription/${userId}`
       );
 
-      setPlan(response.data);
+      console.log("Subscription Data:", response.data);
+      setPlan(response.data); 
     } catch (error) {
       console.error("Subscription fetch error:", error);
     }
